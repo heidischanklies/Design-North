@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --northblue:#5C80BC;
+    --darkblue:#222A68;
+    --northgrey:#747578;
+    --northwhite:#FFF8F0;
+    --northwarm:#FFFDF7;
+}
+
+body{
+    font-family:"Archivo", Verdana, Tahoma, sans-serif;
+    background-color:var(--northwarm);
+}
+
+body::selection{
+    background-color:var(--northgrey);
+}
+
+h1, h2, h3, h4, table tr th{
+    font-family:"Zalando Sans", 'Courier New', Courier, monospace;
+}
+
+header{
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row-reverse;
+}
+
+header nav{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+}
+
+header nav a{
+    background-color:var(--northblue);
+    padding:1rem;
+    border-radius:1rem; 
+    text-decoration:none;
+    color:var(--northwhite);
+}
+
+header nav a:hover{
+    color:var(--darkblue);
+}
+
+header h1{
+    display:flex;
+    align-items:center;
+    color:var(--northblue);
+    order:+1;
+}
+
+header img{
+    display:block;
+}
+
+#banner{
+    display:block;
+    margin:0 auto;
+    border-radius:2rem;
+}
+
+#firstline{
+    margin:3rem;
+    display:flex;
+    gap:2rem;
+}
+
+.intro-details{
+    flex:1;
+    text-align:center;
+    background-color:var(--northblue);
+    border-radius:2rem;
+    padding:1rem 2rem 1rem 2rem;
+    line-height:1.5rem;
+}
+
+.intro-details p{
+    font-size:1.2rem;
+}
+
+span{
+    font-weight:bold;
+}
+
+#registration{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color:var(--darkblue);
+    border-radius:1rem;
+    gap:1rem;
+    margin:0 3rem;
+    padding:1rem 0;
+}
+
+#registration h2{
+    text-align:center;
+    font-size:2rem;
+    color:var(--northwhite);
+}
+
+#options-grid{
+    gap:1rem;
+}
+
+.option{
+    border:2px solid var(--darkblue);
+    border-radius:1rem;
+    padding:1.5rem;
+    background-color:#5c80BC;
+    font-size:1.6rem;
+    text-align:center;
+}
+
+.cost{
+    width:25%;
+}
+
+.option tr td{
+    padding:2rem;
+}
+
+.hoverlight:hover{
+    color:var(--northwhite);
+}
+
+#note{
+    font-style:italic;
+    color:var(--northwhite);
+    padding-bottom:1rem;
+}
+
+#panelimage{
+    display:flex;
+    margin:2rem;
+    gap:2rem;
+    align-items:center;
+    padding-left:1.3rem;
+}
+
+#panelimage p{
+    font-size:1.1rem;
+    line-height:1.2rem;
+}
+
+#panelimage h2{
+    font-size:1.7rem;
+}
+
+#panelimage img{
+    border-radius:1rem;
+    margin-right:1rem;
+}
+
+#schedule-image{
+    display:flex;
+    flex-direction:row-reverse;
+    margin:2rem;
+    gap:2rem;
+    align-items:center;
+    padding:0 1rem;
+}
+
+#schedule-image p{
+    font-size:1.1rem;
+    line-height:1.2rem;
+    padding-right:1rem;
+}
+
+#schedule-image h2{
+    font-size:1.7rem;
+}
+
+#schedule-image img{
+    border-radius:1rem;
+}
+
+#conference-info{
+    margin:1rem 5rem;
+    display:flex;
+    gap:2rem;
+}
+
+.sessions-topics{
+    flex:1;
+    background-color:var(--northblue);
+    border-radius:2rem;
+    padding:1rem 2rem;
+    line-height:1.5rem;
+}
+
+.sessions-topics h2{
+    padding-left:1rem;
+}
+
+#featured{
+    text-align:center;
+    margin-top:3rem;
+    font-size:2rem;
+    text-decoration:underline;
+}
+
+#speakers-list{
+    margin:3rem;
+    display:flex;
+    gap:1rem;
+}
+
+.speaker{
+    flex-direction:column;
+    text-align:center;
+    background-color:var(--darkblue);
+    border-radius:2rem;
+    padding:1rem 2rem 1rem 2rem;
+    line-height:1.5rem;
+    align-items:center;
+}
+
+.speaker h3{
+    font-size:1.5rem;
+    color:white;
+}
+
+.speaker h4{
+    color:white;
+}
+
+.speaker p{
+    color:white;
+}
+
+.speaker img{
+    border-radius:1rem;
+}
+
+#venue{
+    display:flex;
+    margin-left:1rem;
+}
+
+#venue img{
+    border-radius:2rem;
+    margin-right:3rem;
+}
+
+#accessibility{
+    align-self:center;
+    margin:2rem;
+    font-size:1.3rem;
+}
+
+footer{
+    background-color:var(--darkblue);
+    border-radius:2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:1rem;
+    padding:1rem 3rem;
+    color:var(--northwhite);
+}
+
