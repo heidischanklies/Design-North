@@ -29,6 +29,15 @@ h1, h2, h3, h4, table tr th{
     font-family:"Zalando Sans", 'Courier New', Courier, monospace;
 }
 
+.speaker{
+    transition:transform 0.5s ease, box-shadow 1s linear;
+}
+
+.speaker:hover{
+    transform:translateY(-8px);
+    box-shadow:0 16px 32px rgba(0,0,0,0.1);
+}
+
 header{
     display:flex;
     justify-content:space-around;
