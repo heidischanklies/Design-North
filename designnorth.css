@@ -9,8 +9,8 @@ html{
 }
 
 :root{
-    --northblue:#5C80BC;
-    --darkblue:#222A68;
+    --northblue:rgba(92, 128, 188, 0.8);
+    --darkblue:rgba(34, 42, 104, 0.9);
     --northgrey:#747578;
     --northwhite:#FFF8F0;
     --northwarm:#FFFDF7;
@@ -29,15 +29,6 @@ h1, h2, h3, h4, table tr th{
     font-family:"Zalando Sans", 'Courier New', Courier, monospace;
 }
 
-.speaker{
-    transition:transform 0.5s ease, box-shadow 1s linear;
-}
-
-.speaker:hover{
-    transform:translateY(-8px);
-    box-shadow:0 16px 32px rgba(0,0,0,0.1);
-}
-
 header{
     display:flex;
     justify-content:space-around;
@@ -51,7 +42,7 @@ header nav{
 }
 
 header nav a{
-    background-color:var(--northblue);
+    background-color:var(--darkblue);
     padding:1rem;
     border-radius:1rem; 
     text-decoration:none;
@@ -65,7 +56,7 @@ header nav a:hover{
 header h1{
     display:flex;
     align-items:center;
-    color:var(--northblue);
+    color:var(--darkblue);
     order:+1;
 }
 
@@ -93,6 +84,7 @@ header img{
     max-width:100%;
     height:auto;
     animation:fadeUp 1s ease forwards;
+    box-shadow: -3px 5px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
 #firstline{
@@ -108,6 +100,7 @@ header img{
     border-radius:2rem;
     padding:1rem 2rem 1rem 2rem;
     line-height:1.5rem;
+    box-shadow: -3px 5px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
 .intro-details p{
@@ -127,6 +120,7 @@ span{
     gap:1rem;
     margin:0 3rem;
     padding:1rem 0;
+    box-shadow: -3px 5px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
 #registration h2{
@@ -139,21 +133,40 @@ span{
     gap:1rem;
 }
 
+
 .option{
     border:2px solid var(--darkblue);
     border-radius:1rem;
-    padding:1.5rem;
     background-color:#5c80BC;
     font-size:1.6rem;
     text-align:center;
+    table-layout: fixed;
+    width:60%;
+    border-collapse: collapse;
+    margin:0 auto;
 }
 
-.cost{
-    width:25%;
+.option th, .option td{
+    width:33.33%;
+    padding:1.5rem;
 }
 
-.option tr td{
-    padding:2rem;
+.option th:nth-child(1),
+.option td:nth-child(1),
+.option th:nth-child(3),
+.option td:nth-child(3){
+    width: 30%;
+}
+
+.option th:nth-child(2),
+.option td:nth-child(2) {
+    width: 40%;
+}
+
+.option th:first-child,
+.option td:first-child {
+    text-align: left;
+    padding-left: 2rem;
 }
 
 .hoverlight:hover{
@@ -198,6 +211,11 @@ span{
     height: auto;
 }
 
+#panelimage img, #scheduleimage img{
+    max-width:100%;
+    height:auto;
+}
+
 #scheduleimage{
     display:flex;
     flex-direction:row-reverse;
@@ -235,6 +253,7 @@ span{
     border-radius:2rem;
     padding:1rem 2rem;
     line-height:1.5rem;
+    box-shadow: -3px 5px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
 .sessions-topics h2{
@@ -285,14 +304,26 @@ span{
     height: auto;
 }
 
+.speaker{
+    transition:transform 0.5s ease, box-shadow 1s linear;
+}
+
+.speaker:hover{
+    transform:translateY(-8px);
+    box-shadow:0 16px 32px rgba(0,0,0,0.3);
+}
+
 #venue{
     display:flex;
     margin-left:1rem;
+    align-items:center;
 }
 
-#venue img{
+#venueimg{
     border-radius:2rem;
-    margin-right:3rem;
+    margin-right:2rem;
+    max-width:100%;
+    height:auto;
 }
 
 #accessibility{
@@ -312,3 +343,40 @@ footer{
     color:var(--northwhite);
 }
 
+@media screen and (max-width:1280px){
+    #panelimage img, #scheduleimage img{
+        margin-top:1rem;
+    }
+    
+    #panelimage{
+        display:flex;
+        flex-direction:column-reverse;
+        width:80%;
+        margin:0 auto;
+        text-align:center;
+        gap:0;
+    }
+
+    #scheduleimage{
+        display:flex;
+        flex-direction:column-reverse;
+        width:80%;
+        margin:0 auto;
+        text-align:center;
+        gap:0;
+    }
+
+    #venue{
+        display:flex;
+        flex-direction:column-reverse;
+        width:80%;
+        margin:0 auto;
+        text-align:center;
+        gap:0;
+    }
+
+    #venue img{
+        margin-right:0;
+        width:100%;
+    }
+}
