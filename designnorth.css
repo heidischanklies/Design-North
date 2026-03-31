@@ -73,10 +73,26 @@ header img{
     display:block;
 }
 
+@keyframes fadeUp{
+      from{
+        /* This will be what the start of the animation looks like */
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        /* This will be what the end of the animation looks like */
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
 #banner{
     display:block;
     margin:0 auto;
     border-radius:2rem;
+    max-width:100%;
+    height:auto;
+    animation:fadeUp 1s ease forwards;
 }
 
 #firstline{
@@ -158,6 +174,14 @@ span{
     padding-left:1.3rem;
 }
 
+#panel, #schedule{
+    flex:1;
+}
+
+#panelimage img, #scheduleimage img{
+    flex:1;
+}
+
 #panelimage p{
     font-size:1.1rem;
     line-height:1.2rem;
@@ -170,9 +194,11 @@ span{
 #panelimage img{
     border-radius:1rem;
     margin-right:1rem;
+    width: 100%;
+    height: auto;
 }
 
-#schedule-image{
+#scheduleimage{
     display:flex;
     flex-direction:row-reverse;
     margin:2rem;
@@ -181,18 +207,20 @@ span{
     padding:0 1rem;
 }
 
-#schedule-image p{
+#scheduleimage p{
     font-size:1.1rem;
     line-height:1.2rem;
     padding-right:1rem;
 }
 
-#schedule-image h2{
+#scheduleimage h2{
     font-size:1.7rem;
 }
 
-#schedule-image img{
+#scheduleimage img{
     border-radius:1rem;
+    width: 100%;
+    height: auto;
 }
 
 #conference-info{
@@ -227,13 +255,15 @@ span{
 }
 
 .speaker{
+    display:flex;
     flex-direction:column;
     text-align:center;
     background-color:var(--darkblue);
     border-radius:2rem;
-    padding:1rem 2rem 1rem 2rem;
+    padding:1rem 1rem;
     line-height:1.5rem;
     align-items:center;
+    flex:1;
 }
 
 .speaker h3{
@@ -251,6 +281,8 @@ span{
 
 .speaker img{
     border-radius:1rem;
+    width: 100%;
+    height: auto;
 }
 
 #venue{
